@@ -2,29 +2,29 @@ class Game:
 	def __init__(self, newPlayerName, emri2 ):
 		self.playerName = newPlayerName
 		self.emri2 = emri2
-		self.playerHand = "NA"
-		self.botHand = "NA"
+		self.player1Hand = "NA"
+		self.player2Hand = "NA"
 		self.winner = "No winner yet"
 		print("New instance of game class for " + self.playerName)
 		
 	def runGame(self):
-		if ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Scissors' or self.botHand == 'scissors')):
+		if ((self.player1Hand == 'rock' or self.player1Hand == 'Rock') and (self.player2Hand == 'Scissors' or self.player2Hand == 'scissors')):
 			self.winner = self.playerName +' wins'
-		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Rock' or self.botHand == 'rock')):
+		elif ((self.player1Hand == 'rock' or self.player1Hand == 'Rock') and (self.player2Hand == 'Rock' or self.player2Hand == 'rock')):
 			self.winner = 'You guys tie.'
-		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Paper' or self.botHand == 'paper')):
+		elif ((self.player1Hand == 'rock' or self.player1Hand == 'Rock') and (self.player2Hand == 'Paper' or self.player2Hand == 'paper')):
 			self.winner =  self.emri2 + ' wins.'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Scissors'or self.botHand == 'scissors')):
+		elif ((self.player1Hand == 'paper' or self.player1Hand == 'Paper') and (self.player2Hand == 'Scissors'or self.player2Hand == 'scissors')):
 			self.winner = self.emri2 + ' wins.'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Rock' or self.botHand == 'rock')):
+		elif ((self.player1Hand == 'paper' or self.player1Hand == 'Paper') and (self.player2Hand == 'Rock' or self.player2Hand == 'rock')):
 			self.winner = self.playerName +' wins'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Paper' or self.botHand == 'paper')):
+		elif ((self.player1Hand == 'paper' or self.player1Hand == 'Paper') and (self.player2Hand == 'Paper' or self.player2Hand == 'paper')):
 			self.winner = 'You tie.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Scissors'or self.botHand == 'scissors')):
+		elif ((self.player1Hand == 'scissors' or self.player1Hand == 'Scissors') and (self.player2Hand == 'Scissors'or self.player2Hand == 'scissors')):
 			self.winner = 'You tie.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Rock' or self.botHand == 'rock')):
+		elif ((self.player1Hand == 'scissors' or self.player1Hand == 'Scissors') and (self.player2Hand == 'Rock' or self.player2Hand == 'rock')):
 			self.winner = self.emri2 + ' wins.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Paper' or self.botHand == 'paper')):
+		elif ((self.player1Hand == 'scissors' or self.player1Hand == 'Scissors') and (self.player2Hand == 'Paper' or self.player2Hand == 'paper')):
 			self.winner = self.playerName +' wins'
 		else:
 			self.winner = 'INVALID input, try again'
@@ -40,8 +40,8 @@ def main():
 	Player1_input = input(player_1 +', enter your tool: ')
 	Player2_input = input(player_2 +', enter your tool: ')
 	
-	myGame.playerHand = str(Player1_input)
-	myGame.botHand = str(Player2_input)
+	myGame.player1Hand = str(Player1_input)
+	myGame.player2Hand = str(Player2_input)
 	myGame.runGame()
 	print(myGame.winner)
 	
