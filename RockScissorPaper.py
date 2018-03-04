@@ -8,23 +8,23 @@ class Game:
 		print("New instance of game class for " + self.playerName)
 		
 	def runGame(self):
-		if ((self.playerHand == 'rock' or self.playerHand == 'Rock') and self.botHand == 'Scissors'):
+		if ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Scissors' or self.botHand == 'scissors')):
 			self.winner = self.playerName +' wins'
-		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and self.botHand == 'Rock'):
+		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Rock' or self.botHand == 'rock')):
 			self.winner = 'You guys tie.'
-		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and self.botHand == 'Paper'):
+		elif ((self.playerHand == 'rock' or self.playerHand == 'Rock') and (self.botHand == 'Paper' or self.botHand == 'paper')):
 			self.winner =  self.emri2 + ' wins.'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and self.botHand == 'Scissors'):
+		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Scissors'or self.botHand == 'scissors')):
 			self.winner = self.emri2 + ' wins.'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and self.botHand == 'Rock'):
+		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Rock' or self.botHand == 'rock')):
 			self.winner = self.playerName +' wins'
-		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and self.botHand == 'Paper'):
+		elif ((self.playerHand == 'paper' or self.playerHand == 'Paper') and (self.botHand == 'Paper' or self.botHand == 'paper')):
 			self.winner = 'You tie.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and self.botHand == 'Scissors'):
+		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Scissors'or self.botHand == 'scissors')):
 			self.winner = 'You tie.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and self.botHand == 'Rock'):
+		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Rock' or self.botHand == 'rock')):
 			self.winner = self.emri2 + ' wins.'
-		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and self.botHand == 'Paper'):
+		elif ((self.playerHand == 'scissors' or self.playerHand == 'Scissors') and (self.botHand == 'Paper' or self.botHand == 'paper')):
 			self.winner = self.playerName +' wins'
 		else:
 			self.winner = 'INVALID input, try again'
